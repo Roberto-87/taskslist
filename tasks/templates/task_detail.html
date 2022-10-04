@@ -1,10 +1,10 @@
 {% extends 'base.html' %} 
 
-
-
 {% block content %}
-
-    <h1> task details</h1>
+<div class="d-flex justify-content-center">
+<h1> task details</h1>
+</div>
+<div class="d-flex justify-content-center p-2">
 
     <!-- {{error}}
     {{task.title}}
@@ -12,27 +12,32 @@
     {{task.important}} -->
     <div>
     <form action="" method='POST'>
+        <div>
         {% csrf_token %}   
         {{form.as_p}}
-        <button>save</button>
+        <div class="m-2 position-relative">  
+        <button class="btn btn-primary position-absolute top-50 start-100">save</button>
+         </div>
     </form>
 
     <form action= "{% url 'task_complete' task.id %}" method='POST'>
         {% csrf_token %}   
-        
-        <button >
+        <div class="m-2 position-relative">    
+        <button class="btn btn-primary position-absolute top-0 start-80">
             Complete
         </button>
-
+    </div>
     </form>
 
     <form action= "{% url 'task_delete' task.id %}" method='POST'>
         {% csrf_token %}   
   
-        <button>
+        <div class="m-2 position-relative">    
+        <button class="btn btn-primary position-absolute top-0 start-50">
            Delete
         </button>
+    </div>
 
     </form>
-    
+</div>  
 {% endblock %}

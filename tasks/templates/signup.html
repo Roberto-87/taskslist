@@ -3,11 +3,29 @@
 {%block content%}
 
 {{error }} 
-
+<div class="d-flex justify-content-center mt-5">
 <form method="POST">
     {% csrf_token %}    
     {{form.as_p }} 
-     <button>Send</button>
+    <div class="d-flex justify-content-start">
+    <button class="btn btn-secondary">Sign up</button>
+</div>
 </form>  
+</div>  
 
 {% endblock %}
+
+<div class="d-flex justify-content-center mt-5">
+    <h1>Sign in</h1>
+    </div>
+    <div class="d-flex justify-content-center mt-5">   
+        {{error}}
+        <form action="/signin/" method='POST'>
+            {% csrf_token %}    
+            {{form.as_p }} 
+            <div class="d-flex justify-content-end">
+              <button class="btn btn-secondary">Sign in</button>
+            </div>
+      
+        </form>
+    </div>  

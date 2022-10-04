@@ -2,6 +2,7 @@
 *{
     text-decoration: none !important;
     list-style: none; 
+    font-family: 'Quicksand', sans-serif;;
 }
 
 
@@ -35,7 +36,16 @@
 
 .div_organiza{
     margin-top: 20% !important;
+   
 }
+
+.body_home{
+    background-color: rgb(34, 64, 93);
+    margin-top: 15% !important;
+    color: white;
+    padding:3%
+    }
+
 
 /*------------- end Home------- */
 
@@ -50,4 +60,19 @@
 
 .tasks_description{
     margin-right: 10% !important;
+}
+
+#id_title, #id_description {
+    display: flex;
+    justify-content: center;
+}
+
+/*-------------end tasks------- */
+
+
+/*-------------sign up------- */
+#id_username, #id_password1, #id_password2, #id_password{
+    display: flex;
+    justify-content: center;
+
 }
