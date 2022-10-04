@@ -1,0 +1,40 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<div class="d-flex justify-content-center">
+    <h1> Tasks completed ✅</h1>
+    </div>
+    <table class="table table-striped table-light">
+      <thead > 
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Task</th>
+          <th scope="col">Description</th>
+          <th scope="col">Date</th>
+        </tr>
+      </thead>
+      <tbody>
+          {% for task in tasks %}
+        <tr>      
+         <th scope="row" class="table_content">{{task.id}}</th>
+          <td class="table_content">{{task.title}}</td>
+          <td class="table_content">{{task.description}}</td>
+          <td class="table_content">{{task.date_completed}}</td>
+        </tr>
+         {% endfor %}
+    
+      </tbody>
+    </table>
+
+{% endblock %}
+
+
+
+<h1>Tasks completed</h1>
+{%for task in tasks%}
+<div>{{task.title}}</div>
+<div>{{task.description}}</div>
+<div>{{task.date_completed}}</div><br>
+{%endfor%}
+ 

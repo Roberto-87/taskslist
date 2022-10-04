@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="d-flex justify-content-center p-2">
+  <h1>Create Task</h1>
+  </div>
+  <div class="d-flex justify-content-center">
+  {{error}}
+  <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}} 
+  <button class="btn btn-primary">Create</button>
+  </form>
+  </div>
+{% endblock %}
+
+
+
+
+  
+<div class="d-flex justify-content-center p-2">
+  <h1>Create Task</h1>
+  </div>
+
+  <div class="d-flex justify-content-center ">
+<div class=" m-5 w-100">
+  <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}} 
+    {{error}}
+    <div class="container ">
+    <div class="form-floating row">
+      <textarea class="form-control " placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <label for="floatingTextarea">Title</label>
+    </div>
+    <div class="form-floating row">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <label for="floatingTextarea">description</label>
+    </div>
+    <button class="btn btn-primary">Create</button>
+</div>
+</div>

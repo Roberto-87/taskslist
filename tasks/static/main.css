@@ -1,0 +1,53 @@
+/*------------- All------- */
+*{
+    text-decoration: none !important;
+    list-style: none; 
+}
+
+
+/*------------- Nav------- */
+
+.link-offline, .link-online{
+    color:white !important;
+}
+
+.link-offline:hover, .link-online:hover{
+    color:rgba(255, 255, 255, 0.378) !important;
+    transition: 0.9s;
+}
+
+.link-offline:active, .link-online:active{
+   transform: scale(1.1);
+   transition: 1.2s;
+}
+
+.nav-online{
+    background-color: rgba(14, 13, 23, 0.817)!important;
+}
+
+.user_active{
+    color: rgb(96, 100, 104);
+}
+/*------------- end Nav------- */
+
+
+/*------------- Home------- */
+
+.div_organiza{
+    margin-top: 20% !important;
+}
+
+/*------------- end Home------- */
+
+/*-------------tasks------- */
+.table_content{
+    color: black;
+}
+
+.table{
+    margin-top: 1%;
+}
+
+.tasks_description{
+    margin-right: 10% !important;
+}
